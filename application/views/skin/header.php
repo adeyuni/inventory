@@ -8,6 +8,7 @@
 <link href="<?php echo site_url('assets/css/bootstrap.min.css')?>" rel="stylesheet">
 <link href="<?php echo site_url('assets/css/datepicker3.css')?>" rel="stylesheet">
 <link href="<?php echo site_url('assets/css/styles.css')?>" rel="stylesheet">
+<link href="<?php echo site_url('assets/css/bootstrap-select.css')?>" rel="stylesheet">
 
 <!--Icons-->
 <script src="<?php echo site_url();?>assets/js/lumino.glyphs.js"></script>

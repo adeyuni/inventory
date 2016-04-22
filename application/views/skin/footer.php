@@ -5,29 +5,116 @@
 
 	<script src="<?php echo site_url();?>assets/js/jquery-1.11.1.min.js"></script>
 	<script src="<?php echo site_url();?>assets/js/bootstrap.min.js"></script>
-	<script src="<?php echo site_url();?>assets/js/chart.min.js"></script>
-	<script src="<?php echo site_url();?>assets/js/chart-data.js"></script>
-	<script src="<?php echo site_url();?>assets/js/easypiechart.js"></script>
-	<script src="<?php echo site_url();?>assets/js/easypiechart-data.js"></script>
 	<script src="<?php echo site_url();?>assets/js/bootstrap-datepicker.js"></script>
-	<script>
-		$('#calendar').datepicker({
-		});
+	<script src="<?php echo site_url();?>assets/js/bootstrap-select.js"></script>
 
-		!function ($) {
-		    $(document).on("click","ul.nav li.parent > a > span.icon", function(){          
-		        $(this).find('em:first').toggleClass("glyphicon-minus");      
-		    }); 
-		    $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
-		}(window.jQuery);
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".form_laptop").hide();
+     		$(".form_smartphone").hide();
+     		$(".form_barang").hide();
+     		$(".form_lain").hide();
+     		$(".form_input").hide();
+     		$(".form_cpu").hide();
 
-		$(window).on('resize', function () {
-		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
-		})
-		$(window).on('resize', function () {
-		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
-		})
-	</script>	
+     		var elm = document.getElementById("jenis_barang").value;
+     		if(elm == 1){
+ 				$(".form_laptop").hide();
+	     		$(".form_smartphone").hide();
+	     		$(".form_barang").hide();
+	     		$(".form_lain").hide();
+	     		$(".form_input").show();
+	     		$(".form_cpu").show();
+ 			}
+ 			else if(elm == 100){
+ 				$(".form_laptop").show();
+	     		$(".form_smartphone").hide();
+	     		$(".form_barang").hide();
+	     		$(".form_lain").hide();
+	     		$(".form_input").show();
+	     		$(".form_cpu").hide();
+ 			}
+ 			else if(elm == 200){
+ 				$(".form_laptop").hide();
+	     		$(".form_smartphone").show();
+	     		$(".form_barang").hide();
+	     		$(".form_lain").hide();
+	     		$(".form_input").show();
+	     		$(".form_cpu").hide();
+ 			}else if(elm == 999){
+ 				$(".form_laptop").hide();
+	     		$(".form_smartphone").hide();
+	     		$(".form_barang").hide();
+	     		$(".form_lain").show();
+	     		$(".form_input").show();
+	     		$(".form_cpu").hide();
+ 			}else if(elm == ""){
+ 				$(".form_laptop").hide();
+	     		$(".form_smartphone").hide();
+	     		$(".form_barang").hide();
+	     		$(".form_lain").hide();
+	     		$(".form_input").hide();
+	     		$(".form_cpu").hide();
+ 			}else{
+ 				$(".form_laptop").hide();
+	     		$(".form_smartphone").hide();
+	     		$(".form_barang").show();
+	     		$(".form_lain").hide();
+	     		$(".form_input").show();
+	     		$(".form_cpu").hide();
+ 			}
+     			
+     		$("#jenis_barang").change(function(){
+     			var elm = document.getElementById("jenis_barang").value;
+
+     			if(elm == 1){
+     				$(".form_laptop").hide();
+		     		$(".form_smartphone").hide();
+		     		$(".form_barang").hide();
+		     		$(".form_lain").hide();
+		     		$(".form_input").show();
+		     		$(".form_cpu").show();
+     			}
+     			else if(elm == 100){
+     				$(".form_laptop").show();
+		     		$(".form_smartphone").hide();
+		     		$(".form_barang").hide();
+		     		$(".form_lain").hide();
+		     		$(".form_input").show();
+		     		$(".form_cpu").hide();
+     			}
+     			else if(elm == 200){
+     				$(".form_laptop").hide();
+		     		$(".form_smartphone").show();
+		     		$(".form_barang").hide();
+		     		$(".form_lain").hide();
+		     		$(".form_input").show();
+		     		$(".form_cpu").hide();
+     			}else if(elm == 999){
+     				$(".form_laptop").hide();
+		     		$(".form_smartphone").hide();
+		     		$(".form_barang").hide();
+		     		$(".form_lain").show();
+		     		$(".form_input").show();
+		     		$(".form_cpu").hide();
+     			}else if(elm == ""){
+     				$(".form_laptop").hide();
+		     		$(".form_smartphone").hide();
+		     		$(".form_barang").hide();
+		     		$(".form_lain").hide();
+		     		$(".form_input").hide();
+		     		$(".form_cpu").hide();
+     			}else{
+     				$(".form_laptop").hide();
+		     		$(".form_smartphone").hide();
+		     		$(".form_barang").show();
+		     		$(".form_lain").hide();
+		     		$(".form_input").show();
+		     		$(".form_cpu").hide();
+     			}
+     	});
+     	});
+	</script>
 </body>
 
 </html>
