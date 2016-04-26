@@ -25,7 +25,14 @@ class BarangModel extends CI_Model {
 		$query = $this->db->get();
 
 		return $query;
-
 	}
 	
+	public function update_data($id, $table, $criteria)
+	{
+
+		$this->db->where('id', $id);
+		$query = $this->db->update($table, $criteria);
+		
+		return $query;
+	}
 }

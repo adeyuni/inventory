@@ -10,3 +10,4 @@
 	  <input type="text" class="form-control" id="sn_other" name="sn_other" placeholder="Serial Number" value="<?php if(isset($sn_other)){echo $sn_other;}?>" >
 	</div>
 </div>
+

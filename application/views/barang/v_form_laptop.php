@@ -34,3 +34,29 @@
     <input type="text" class="form-control" id="kode_laptop" name="kode_laptop" placeholder="Kode Laptop" value="<?php if(isset($kode_laptop)){echo $kode_laptop;}?>" >
   </div>
 </div>
+<div class="form-group">
+  <label for="mon_laptop" class="col-sm-2 control-label">Monitor Ext</label>
+  <div class="col-sm-10">
+    <select id="mon_laptop" class="select2" name="mon_laptop" style="width:300px">
+      <option>Pilih</option>
+      <?php
+        foreach ($listMonitor->result() as $row) {
+          echo "<option value='$row->id'>".$row->sn."</option>";
+        }
+      ?>
+    </select>
+  </div>
+</div>
+<div class="form-group">
+  <label for="mouse_laptop" class="col-sm-2 control-label">Mouse</label>
+  <div class="col-sm-10">
+    <select id="mouse_laptop" name="mouse_laptop" class="select2" style="width:300px">
+      <option>Pilih</option>
+      <?php
+        foreach ($listMouse->result() as $row) {
+          echo "<option value='$row->id'>".$row->sn."</option>";
+        }
+      ?>
+    </select>
+  </div>
+</div>

@@ -45,7 +45,7 @@
 					  <div class="form-group">
 					    <label for="no_it" class="col-sm-2 control-label">No IT</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" id="no_it" name="no_it" placeholder="No IT" value="<?php if(isset($no_it)){echo $no_it;}?>" >
+					      <input type="number" class="form-control" id="no_it" name="no_it" placeholder="No IT" value="<?php if(isset($no_it)){echo $no_it;}?>" >
 					    </div>
 					  </div>
 				  </div>
@@ -68,11 +68,17 @@
 				  		include "v_form_smartphone.php";
 				  	?>
 				  </div>
+				  <div class="form_imac">
+				  	<?php
+				  		include "v_form_imac.php";
+				  	?>
+				  </div>
 				  <div class="form_lain">
 				  	<?php
 				  		include "v_form_lain.php";
 				  	?>
 				  </div>
+
 
 				  <div class="form_input">
 				  	  <div class="form-group">
@@ -121,7 +127,12 @@
 						  </select>
 					    </div>
 					  </div>
-
+					  <div class="form-group">
+					    <label for="user" class="col-sm-2 control-label">User</label>
+					    <div class="col-sm-10">
+					      <input type="text" class="form-control" id="user" name="user" placeholder="User" value="<?php if(isset($user)){echo $user;}?>" >
+					    </div>
+					  </div>
 					  <div class="form-group">
 					    <div class="col-sm-offset-2 col-sm-10">
 					      <input type="submit" name="submit" id="submit" class="btn btn-default" value="Tambah">
