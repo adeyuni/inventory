@@ -6,6 +6,7 @@
 <div class="row">
 	<div class="col-lg-12">
 		<div class="panel panel-default">
+			<?php if(isset($msg)){echo $msg;}?>
 			<div class="panel-body">
 				<form class="form-horizontal" action="<?php echo site_url($action);?>" method="POST"> 
 				<div class="col-lg-6">
@@ -67,28 +68,40 @@
 						<label for="mon_cpu1" class="col-sm-4 control-label">Monitor</label>
 						<div class="col-sm-6">
 							<select id="mon_cpu1" class="select2" name="mon_cpu1" style="width:300px">
-								<option>Pilih</option>
 								<?php
-									echo "<option value='$id_mon1' selected>".$sn_mon1."</option>";
+									if($id_mon1 != 0){ 
+										echo "<option value=0 >Pilih</option>";
+										echo "<option value='$id_mon1' selected>".$sn_mon1."</option>"; 
+									}
+									else{ 
+										echo "<option value=0 selected>Pilih</option>";
+									}
 									foreach ($listMonitor->result() as $row) {
 										echo "<option value='$row->id'>".$row->sn."</option>";
 									}
 								?>
 							</select>
+							<input type="hidden" name="mon_old" id="mon_old" value="<?php echo $id_mon1;?>">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="mon_cpu2" class="col-sm-4 control-label">Monitor Ext</label>
 						<div class="col-sm-6">
-							<select id="mon_cpu2" class="select2" name="mon_cpu2" style="width:300px">
-								<option>Pilih</option>
+							<select id="mon_cpu2" class="select2" name="mon_cpu2" style="width:300px">	
 								<?php
-									echo "<option value='$id_mon2' selected>".$sn_mon2."</option>";
+									if($id_mon2 != 0){ 
+										echo "<option value=0 >Pilih</option>";
+										echo "<option value='$id_mon2' selected>".$sn_mon2."</option>"; 
+									}
+									else{ 
+										echo "<option value=0 selected>Pilih</option>";
+									}
 									foreach ($listMonitor->result() as $row) {
 										echo "<option value='$row->id'>".$row->sn."</option>";
 									}
 								?>
 							</select>
+							<input type="hidden" name="mon_old2" id="mon_old2" value="<?php echo $id_mon2;?>">
 						</div>
 					</div>
 				</div>
@@ -98,42 +111,60 @@
 						<label for="keyboard_cpu" class="col-sm-4 control-label">Keyboard</label>
 						<div class="col-sm-6">
 							<select id="keyboard_cpu" class="select2" name="keyboard_cpu" style="width:300px">
-								<option>Pilih</option>
 								<?php
-									echo "<option value='$id_keyboard' selected>".$sn_keyboard."</option>";
+									if($id_keyboard != 0){ 
+										echo "<option value=0 >Pilih</option>";
+										echo "<option value='$id_keyboard' selected>".$sn_keyboard."</option>";
+									}
+									else{ 
+										echo "<option value=0 selected>Pilih</option>";
+									}
 									foreach ($listKeyboard->result() as $row) {
 										echo "<option value='$row->id'>".$row->sn."</option>";
-									}
+									}									
 								?>
 							</select>
+							<input type="hidden" name="keyboard_old" id="keyboard_old" value="<?php echo $id_keyboard;?>">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="mouse_cpu" class="col-sm-4 control-label">Mouse</label>
 						<div class="col-sm-6">
 							<select id="mouse_cpu" name="mouse_cpu" class="select2" style="width:300px">
-								<option>Pilih</option>
 								<?php
-									echo "<option value='$id_mouse' selected>".$sn_mouse."</option>";
+									if($id_mouse != 0){ 
+										echo "<option value=0 >Pilih</option>";
+										echo "<option value='$id_mouse' selected>".$sn_mouse."</option>";
+									}
+									else{ 
+										echo "<option value=0 selected>Pilih</option>";
+									}
 									foreach ($listMouse->result() as $row) {
 										echo "<option value='$row->id'>".$row->sn."</option>";
 									}
 								?>
 							</select>
+							<input type="hidden" name="mouse_old" id="mouse_old" value="<?php echo $id_mouse;?>">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="ups_cpu" class="col-sm-4 control-label">UPS</label>
 						<div class="col-sm-6">
 							<select id="ups_cpu" name="ups_cpu" class="select2" style="width:300px">
-								<option>Pilih</option>
 								<?php
-									echo "<option value='$id_ups' selected>".$sn_ups."</option>";
+									if($id_ups != 0){ 
+										echo "<option value=0 >Pilih</option>";
+										echo "<option value='$id_ups' selected>".$sn_ups."</option>";
+									}
+									else{ 
+										echo "<option value=0 selected>Pilih</option>";
+									}
 									foreach ($listUPS->result() as $row) {
 										echo "<option value='$row->id'>".$row->sn."</option>";
 									}
 								?>
 							</select>
+							<input type="hidden" name="ups_old" id="ups_old" value="<?php echo $id_ups;?>">
 						</div>
 					</div>
 					 <div class="form-group">
@@ -194,9 +225,6 @@
 					    </div>
 					  </div>
 				</div>
-			</div>
-			<!-- <div class="panel-heading"></div> -->
-			<?php if(isset($msg)){echo $msg;}?>
-			
+			</div>			
 		</div>
 	</div>

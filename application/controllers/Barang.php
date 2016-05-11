@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class barang extends CI_Controller {
 
 	const TABLE_BARANG = "barang";
+	const CREATOR = 1;
 
 	public function __construct()
 	{
@@ -19,7 +20,7 @@ class barang extends CI_Controller {
 		$submit = $this->input->post('submit');
 
 		if($submit == 'Tambah'){
-			$id_creator = 1;
+			$id_creator = $this::CREATOR;
 			$jenis_barang = $this->input->post('jenis_barang');
 			$pic = $this->input->post('pic');
 
@@ -216,10 +217,10 @@ class barang extends CI_Controller {
 
 		$this->data['listBarang'] = $this->MBarang->get_data('type_barang','');
 		$this->data['listPIC'] = $this->MBarang->get_data('pic','');
-		$this->data['listKeyboard'] = $this->MBarang->get_data('keyboard',array('user is null' => null));
-		$this->data['listMouse'] = $this->MBarang->get_data('mouse',array('user is null' => null));
-		$this->data['listUPS'] = $this->MBarang->get_data('ups',array('user is null' => null));
-		$this->data['listMonitor'] = $this->MBarang->get_data('monitor',array('user is null' => null));
+		$this->data['listKeyboard'] = $this->MBarang->get_data('keyboard',array('user is null or user = ""' => null));
+		$this->data['listMouse'] = $this->MBarang->get_data('mouse',array('user is null or user = ""' => null));
+		$this->data['listUPS'] = $this->MBarang->get_data('ups',array('user is null or user = ""' => null));
+		$this->data['listMonitor'] = $this->MBarang->get_data('monitor',array('user is null or user = ""' => null));
 		$this->data['additional'] = "input.php";
 		$this->data['title'] = 'Penambahan Barang';
 		$this->data['action'] = 'barang/add';

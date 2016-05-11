@@ -1,9 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class daftar_barang extends CI_Controller {
-
-	const TABLE_BARANG = "barang";
+class delete extends CI_Controller {
 
 	public function __construct()
 	{
@@ -11,16 +9,13 @@ class daftar_barang extends CI_Controller {
 		$this->load->model('BarangModel', 'MBarang');
 	}
 
-	public function cpu()
+	public function cpu($id = null)
 	{
-		$this->data['listCPU'] = $this->MBarang->get_data('cpu','');
-		$this->data['listBarang'] = $this->MBarang->get_data('type_barang','');
-		$this->data['additional'] = "daftar_barang.php";
-		$this->data['jenis_barang'] = 1;
+		$query = $this->MBarang->delete('cpu', 'id', $id);
 
-		$this->data['title'] = 'Daftar PC';
-		$this->data['action'] = 'barang/add';
-		$this->load->template('barang/v_list_cpu', $this->data);
+		if($query){
+			redirect('daftar_barang/cpu', 'refresh');
+		}
 	}
 
 	public function monitor()

@@ -36,8 +36,7 @@
 						        <th data-field="no_po" data-sortable="true"><b>No PO</b></th>
 						        <th data-field="no_it"  data-sortable="true"><b>NO IT</b></th>
 						        <th data-field="no_asset" data-sortable="true"><b>No Asset</b></th>
-						        <th data-field="service_tag" data-sortable="true"><b>Service Tag</b></th>
-						        <th data-field="nama_pc" data-sortable="true"><b>Nama PC</b></th>
+						        <th data-field="service_tag" data-sortable="true"><b>Serial Number</b></th>
 						        <th data-field="user" data-sortable="true"><b>User</b></th>
 						        <th data-field="action" data-sortable="true"><b>Action</b></th>
 						    </tr>
@@ -45,19 +44,18 @@
 						    <tbody>
 						    	<?php 
 						    		$i=1;
-						    		foreach ($listCPU->result() as $row) {
+						    		foreach ($listMouse->result() as $row) {
 						    			
 						    			echo "<tr>";
 						    			echo "<td>".$i++."</td>";
 						    			echo "<td>".$row->no_po."</td>";
 						    			echo "<td>".$row->no_it."</td>";
 						    			echo "<td>".$row->no_asset."</td>";
-						    			echo "<td>".$row->service_tag."</td>";
-						    			echo "<td>".$row->nama_pc."</td>";
+						    			echo "<td>".$row->sn."</td>";
 						    			echo "<td>".$row->user."</td>";
-						    			$link_edit = site_url('/edit/cpu/'.$row->id);
-						    			$link_detail = site_url('/detail/cpu/'.$row->id);
-						    			$link_delete = site_url('/delete/cpu/'.$row->id);
+						    			$link_edit = site_url('/edit/barang/mouse/'.$row->id);
+						    			$link_detail = site_url('/detail/barang/mouse/'.$row->id);
+						    			$link_delete = site_url('/delete/mouse/'.$row->id);
 						    			echo "<td><a href='$link_detail' target='_blank'>Detail</a> | <a href='$link_edit'>Edit</a> | <a href='$link_delete' onclick='return konfirmasi()'>Delete</a></td>";
 						    			echo "</tr>";
 						    		}

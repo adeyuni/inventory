@@ -8,19 +8,24 @@
 	<div class="col-lg-12">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<select class="form-control" name="jenis_barang" id="jenis_barang">
-				    		<option value="">Silahkan Pilih</option>
-				    		<?php
-				    			foreach ($listBarang->result() as $row) {
-				    				if($jenis_barang == $row->id){
-				    					echo "<option value='$row->id' selected>".$row->nama."</option>";
-				    				}else{
-				    					echo "<option value='$row->id'>".$row->nama."</option>";
-				    				}
-									
-								}
-				    		?>
-				    	</select>
+						<div class="form-group">
+					    	<label for="sn" class="col-sm-2 control-label">Silahkan Pilih : </label>
+					    	<div class="col-sm-4">
+					      		<select class="form-control" name="jenis_barang" id="jenis_barang">
+						    		<option value="">Silahkan Pilih</option>
+						    		<?php
+						    			foreach ($listBarang->result() as $row) {
+						    				if($jenis_barang == $row->id){
+						    					echo "<option value='$row->id' selected>".$row->nama."</option>";
+						    				}else{
+						    					echo "<option value='$row->id'>".$row->nama."</option>";
+						    				}
+											
+										}
+						    		?>
+						    	</select>
+					    	</div>
+					  	</div>
 					</div>
 					<div class="panel-body">
 						<table data-toggle="table" data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
@@ -48,7 +53,10 @@
 						    			echo "<td>".$row->no_asset."</td>";
 						    			echo "<td>".$row->sn."</td>";
 						    			echo "<td>".$row->user."</td>";
-						    			echo "<td>Detail | Edit | Delete</td>";
+						    			$link_edit = site_url('/edit/barang/monitor/'.$row->id);
+						    			$link_detail = site_url('/detail/barang/monitor/'.$row->id);
+						    			$link_delete = site_url('/delete/monitor/'.$row->id);
+						    			echo "<td><a href='$link_detail' target='_blank'>Detail</a> | <a href='$link_edit'>Edit</a> | <a href='$link_delete' onclick='return konfirmasi()'>Delete</a></td>";
 						    			echo "</tr>";
 						    		}
 						    	?>

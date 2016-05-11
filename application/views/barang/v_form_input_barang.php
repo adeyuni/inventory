@@ -13,7 +13,7 @@
 				<form class="form-horizontal" action="<?php echo site_url($action);?>" method="POST"> 
 				  <div class="form-group">
 				    <label for="jenis_barang" class="col-sm-2 control-label">Jenis Barang</label>
-				    <div class="col-sm-10">
+				    <div class="col-sm-4">
 				    	<select class="form-control" name="jenis_barang" id="jenis_barang">
 				    		<option value="">Silahkan Pilih</option>
 				    		<?php
@@ -32,20 +32,20 @@
 				  <div class="form_input">
 				  	  <div class="form-group">
 					    <label for="no_po" class="col-sm-2 control-label">No PO</label>
-					    <div class="col-sm-10">
+					    <div class="col-sm-4">
 					      <input type="text" class="form-control" id="no_po" name="no_po" placeholder="No PO" value="<?php if(isset($no_po)){echo $no_po;}?>"  >
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="no_asset" class="col-sm-2 control-label">No Asset</label>
-					    <div class="col-sm-10">
+					    <div class="col-sm-4">
 					      <input type="text" class="form-control" id="no_asset" name="no_asset" placeholder="No Asset" value="<?php if(isset($no_asset)){echo $no_asset;}?>" >
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="no_it" class="col-sm-2 control-label">No IT</label>
-					    <div class="col-sm-10">
-					      <input type="number" class="form-control" id="no_it" name="no_it" placeholder="No IT" value="<?php if(isset($no_it)){echo $no_it;}?>" >
+					    <div class="col-sm-4">
+					      <input type="number" class="form-control" id="no_it" name="no_it" placeholder="No IT" value="<?php if(isset($no_it)){echo $no_it;}?>" required >
 					    </div>
 					  </div>
 				  </div>
@@ -83,31 +83,31 @@
 				  <div class="form_input">
 				  	  <div class="form-group">
 					    <label for="type" class="col-sm-2 control-label">Type</label>
-					    <div class="col-sm-10">
+					    <div class="col-sm-4">
 					      <input type="text" class="form-control" id="type" name="type" placeholder="Type" value="<?php if(isset($type)){echo $type;}?>" >
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="merk" class="col-sm-2 control-label">Merk</label>
-					    <div class="col-sm-10">
+					    <div class="col-sm-4">
 					      <input type="text" class="form-control" id="merk" name="merk" placeholder="Merk" value="<?php if(isset($merk)){echo $merk;}?>" >
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="vendor" class="col-sm-2 control-label">Vendor</label>
-					    <div class="col-sm-10">
+					    <div class="col-sm-4">
 					      <input type="text" class="form-control" id="vendor" name="vendor" placeholder="Vendor" value="<?php if(isset($vendor)){echo $vendor;}?>" >
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="tgl_terima" class="col-sm-2 control-label">Tanggal Terima</label>
 					    <div class="col-sm-2">
-					      <input type="date" class="form-control" id="tgl_terima" name="tgl_terima" placeholder="Tanggal Terima" value="<?php if(isset($tgl_terima)){echo $tgl_terima;}?>" >
+					      <input type="date" class="form-control" id="tgl_terima" name="tgl_terima" placeholder="Tanggal Terima" value="<?php if(isset($tgl_terima)){echo $tgl_terima;}?>" required>
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="pic" class="col-sm-2 control-label">PIC</label>
-					    <div class="col-sm-10">
+					    <div class="col-sm-4">
 					    	<?php 
 					    		if(isset($listOfPic)){
 					    			$pic = explode(",", $listOfPic);
@@ -129,12 +129,12 @@
 					  </div>
 					  <div class="form-group">
 					    <label for="user" class="col-sm-2 control-label">User</label>
-					    <div class="col-sm-10">
+					    <div class="col-sm-4">
 					      <input type="text" class="form-control" id="user" name="user" placeholder="User" value="<?php if(isset($user)){echo $user;}?>" >
 					    </div>
 					  </div>
 					  <div class="form-group">
-					    <div class="col-sm-offset-2 col-sm-10">
+					    <div class="col-sm-offset-2 col-sm-4">
 					      <input type="submit" name="submit" id="submit" class="btn btn-default" value="Tambah">
 					    </div>
 					  </div>

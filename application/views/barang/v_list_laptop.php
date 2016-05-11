@@ -45,20 +45,19 @@
 						    <tbody>
 						    	<?php 
 						    		$i=1;
-						    		foreach ($listCPU->result() as $row) {
+						    		foreach ($listLaptop->result() as $row) {
 						    			
 						    			echo "<tr>";
 						    			echo "<td>".$i++."</td>";
 						    			echo "<td>".$row->no_po."</td>";
 						    			echo "<td>".$row->no_it."</td>";
 						    			echo "<td>".$row->no_asset."</td>";
-						    			echo "<td>".$row->service_tag."</td>";
-						    			echo "<td>".$row->nama_pc."</td>";
+						    			echo "<td>".$row->sn_lp."</td>";
+						    			echo "<td>".$row->nama_laptop."</td>";
 						    			echo "<td>".$row->user."</td>";
 						    			$link_edit = site_url('/edit/cpu/'.$row->id);
 						    			$link_detail = site_url('/detail/cpu/'.$row->id);
-						    			$link_delete = site_url('/delete/cpu/'.$row->id);
-						    			echo "<td><a href='$link_detail' target='_blank'>Detail</a> | <a href='$link_edit'>Edit</a> | <a href='$link_delete' onclick='return konfirmasi()'>Delete</a></td>";
+						    			echo "<td><a href='$link_detail' target='_blank'>Detail</a> | <a href='$link_edit'>Edit</a> | Delete</td>";
 						    			echo "</tr>";
 						    		}
 						    	?>

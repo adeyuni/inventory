@@ -35,4 +35,11 @@ class BarangModel extends CI_Model {
 		
 		return $query;
 	}
+
+	public function delete($table, $id_table, $id)
+	{
+		$q = $this->db->delete($table, array($id_table => $id));
+
+		return $q; 
+	}
 }
