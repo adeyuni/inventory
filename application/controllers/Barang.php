@@ -36,6 +36,7 @@ class barang extends CI_Controller {
 			
 			$this->data['jenis_barang'] = $jenis_barang;
 			$this->data['no_po'] = $this->input->post('no_po');
+			$this->data['no_do'] = $this->input->post('no_do');
 			$this->data['no_asset'] = $this->input->post('no_asset');
 			$this->data['no_it'] = $this->input->post('no_it');
 			$this->data['type'] = $this->input->post('type');
@@ -43,11 +44,14 @@ class barang extends CI_Controller {
 			$this->data['vendor'] = $this->input->post('vendor');
 			$this->data['tgl_terima'] = $this->input->post('tgl_terima');
 			$this->data['user'] = $this->input->post('user');
+			$this->data['location'] = $this->input->post('location');
+			$this->data['ket'] = $this->input->post('ket');
 			$this->data['listOfPic'] = $listOfPic;
 
 			//'nama' => $this->getNamaBarang($jenis_barang),
 			$data = array(
 							'no_po' => $this->data['no_po'],
+							'no_do' => $this->data['no_do'],
 							'no_asset' => $this->data['no_asset'],
 							'no_it' => $this->data['no_it'],
 							'type' => $this->data['type'],
@@ -57,6 +61,8 @@ class barang extends CI_Controller {
 							'pic' => $this->data['listOfPic'],
 							'id_creator' => $id_creator,
 							'user' => $this->data['user'],
+							'location' => $this->data['location'],
+							'ket' => $this->data['ket'],
 							'time_create' => date('Y-m-d H:i:s')
 						);
 
@@ -217,6 +223,7 @@ class barang extends CI_Controller {
 
 		$this->data['listBarang'] = $this->MBarang->get_data('type_barang','');
 		$this->data['listPIC'] = $this->MBarang->get_data('pic','');
+		$this->data['listLocation'] = $this->MBarang->get_data('location ','');
 		$this->data['listKeyboard'] = $this->MBarang->get_data('keyboard',array('user is null or user = ""' => null));
 		$this->data['listMouse'] = $this->MBarang->get_data('mouse',array('user is null or user = ""' => null));
 		$this->data['listUPS'] = $this->MBarang->get_data('ups',array('user is null or user = ""' => null));

@@ -53,11 +53,85 @@
 					    </div>
 					  </div>
 					  <div class="form-group">
-					    <label for="sn" class="col-sm-4 control-label">Serial Number</label>
-					    <div class="col-sm-6">
-					      <input type="text" class="form-control" id="sn" name="sn" placeholder="Serial Number" value="<?php if(isset($sn)){echo $sn;}?>" >
-					    </div>
+						<label for="sn_lp" class="col-sm-4 control-label">Serial Number Laptop</label>
+						<div class="col-sm-6">
+						  <input type="text" class="form-control" id="sn_lp" name="sn_lp" placeholder="Serial Number Laptop" value="<?php if(isset($sn_lp)){echo $sn_lp;}?>" >
+						</div>
 					  </div>
+					  <div class="form-group">
+						<label for="sn_hdd" class="col-sm-4 control-label">Serial Number Hardisk</label>
+						<div class="col-sm-6">
+						  <input type="text" class="form-control" id="sn_hdd" name="sn_hdd" placeholder="Serial Number Hardisk" value="<?php if(isset($sn_hdd)){echo $sn_hdd;}?>" >
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label for="sn_baterai" class="col-sm-4 control-label">Serial Number Baterai</label>
+						<div class="col-sm-6">
+						  <input type="text" class="form-control" id="sn_baterai" name="sn_baterai" placeholder="Serial Number Hardisk" value="<?php if(isset($sn_baterai)){echo $sn_baterai;}?>" >
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label for="sn_charger" class="col-sm-4 control-label">Serial Number Charger</label>
+						<div class="col-sm-6">
+						  <input type="text" class="form-control" id="sn_charger" name="sn_charger" placeholder="Serial Number Charger" value="<?php if(isset($sn_charger)){echo $sn_charger;}?>" >
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label for="nama_laptop" class="col-sm-4 control-label">Nama Laptop</label>
+						<div class="col-sm-6">
+						  <input type="text" class="form-control" id="nama_laptop" name="nama_laptop" placeholder="Nama Laptop" value="<?php if(isset($nama_laptop)){echo $nama_laptop;}?>" >
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label for="kode_laptop" class="col-sm-4 control-label">Kode Laptop</label>
+						<div class="col-sm-6">
+						  <input type="text" class="form-control" id="kode_laptop" name="kode_laptop" placeholder="Kode Laptop" value="<?php if(isset($kode_laptop)){echo $kode_laptop;}?>" >
+						</div>
+					  </div>
+					<div class="form-group">
+						<label for="mon_laptop" class="col-sm-4 control-label">Monitor</label>
+						<div class="col-sm-6">
+							<select id="mon_laptop" class="select2" name="mon_laptop" style="width:300px">
+								<?php
+									if($id_mon1 != 0){ 
+										echo "<option value=0 >Pilih</option>";
+										echo "<option value='$id_mon1' selected>".$sn_mon1."</option>"; 
+									}
+									else{ 
+										echo "<option value=0 selected>Pilih</option>";
+									}
+									foreach ($listMonitor->result() as $row) {
+										echo "<option value='$row->id'>".$row->sn."</option>";
+									}
+								?>
+							</select>
+							<input type="hidden" name="mon_old" id="mon_old" value="<?php echo $id_mon1;?>">
+						</div>
+					</div>
+					
+				</div>
+
+				<div class="col-lg-6">
+					<div class="form-group">
+						<label for="mouse_laptop" class="col-sm-4 control-label">Mouse</label>
+						<div class="col-sm-6">
+							<select id="mouse_laptop" name="mouse_laptop" class="select2" style="width:300px">
+								<?php
+									if($id_mouse != 0){ 
+										echo "<option value=0 >Pilih</option>";
+										echo "<option value='$id_mouse' selected>".$sn_mouse."</option>";
+									}
+									else{ 
+										echo "<option value=0 selected>Pilih</option>";
+									}
+									foreach ($listMouse->result() as $row) {
+										echo "<option value='$row->id'>".$row->sn."</option>";
+									}
+								?>
+							</select>
+							<input type="hidden" name="mouse_old" id="mouse_old" value="<?php echo $id_mouse;?>">
+						</div>
+					</div>
 					 <div class="form-group">
 					    <label for="type" class="col-sm-4 control-label">Type</label>
 					    <div class="col-sm-6">

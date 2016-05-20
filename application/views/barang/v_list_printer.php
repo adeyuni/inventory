@@ -53,7 +53,10 @@
 						    			echo "<td>".$row->no_asset."</td>";
 						    			echo "<td>".$row->sn."</td>";
 						    			echo "<td>".$row->user."</td>";
-						    			echo "<td>Detail | Edit | Delete</td>";
+						    			$link_edit = site_url('/edit/peripheral/printer/'.$row->id);
+						    			$link_detail = site_url('/detail/peripheral/printer/'.$row->id);
+						    			$link_delete = site_url('/delete/mouse/'.$row->id);
+						    			echo "<td><a href='$link_detail' target='_blank'>Detail</a> | <a href='$link_edit'>Edit</a> | <a href='$link_delete' onclick='return konfirmasi()'>Delete</a></td>";
 						    			echo "</tr>";
 						    		}
 						    	?>

@@ -36,23 +36,11 @@
 							</tr>
 							<tr>
 								<td><b>Service Tag</b></td>
-								<td><?php if(isset($service_tag)){echo $service_tag;}?></td>
+								<td><?php if(isset($sn_imac)){echo $sn_imac;}?></td>
 							</tr>
 							<tr>
-								<td><b>Serial Number</b></td>
-								<td><?php if(isset($sn_cpu)){echo $sn_cpu;}?></td>
-							</tr>
-							<tr>
-								<td><b>Nama PC</b></td>
-								<td><?php if(isset($nama_pc)){echo $nama_pc;}?></td>
-							</tr>
-							<tr>
-								<td><b>Monitor</b></td>
-								<td><?php if(isset($sn_mon1)){echo $sn_mon1;}?></td>
-							</tr>
-							<tr>
-								<td><b>Monitor Ext</b></td>
-								<td><?php if(isset($sn_mon2)){echo $sn_mon2;}?></td>
+								<td><b>Nama Imac</b></td>
+								<td><?php if(isset($nama_imac)){echo $nama_imac;}?></td>
 							</tr>
 							<tr>
 								<td><b>Keyboard</b></td>
@@ -75,6 +63,7 @@
 					<br />
 					<table class="table">
 						<tbody>
+							
 							<tr>
 								<td><b>Type</b></td>
 								<td><?php if(isset($type)){echo $type;}?></td>

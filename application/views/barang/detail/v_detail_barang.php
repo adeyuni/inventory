@@ -7,8 +7,12 @@
 	<div class="col-lg-12">
 		<div class="panel panel-default">
 			<?php if(isset($msg)){echo $msg;}?>
+
 			<div class="panel-body">
 				<div class="col-lg-6">
+					<a href="<?php echo site_url($url_edit);?>">Edit Data</a>
+					<br />
+					<br />
 					<table class="table">
 						<tbody>
 							<tr>
@@ -18,6 +22,10 @@
 							<tr>
 								<td><b>No PO</b></td>
 								<td><?php if(isset($no_po)){echo $no_po;}?></td>
+							</tr>
+							<tr>
+								<td><b>No DO</b></td>
+								<td><?php if(isset($no_do)){echo $no_do;}?></td>
 							</tr>
 							<tr>
 								<td><b>No Asset</b></td>
@@ -48,6 +56,8 @@
 				</div>
 
 				<div class="col-lg-6">
+					<br />
+					<br />
 					<table class="table">
 						<tbody>
 							
@@ -62,6 +72,14 @@
 							<tr>
 								<td><b>User</b></td>
 								<td><?php if(isset($user)){echo $user;}?></td>
+							</tr>
+							<tr>
+								<td><b>Location</b></td>
+								<td><?php if(isset($location)){echo $location;}?></td>
+							</tr>
+							<tr>
+								<td><b>Keterangan</b></td>
+								<td><?php if(isset($ket)){echo $ket;}?></td>
 							</tr>
 							<tr>
 								<td><b>Tanggal Buat / Creator</b></td>

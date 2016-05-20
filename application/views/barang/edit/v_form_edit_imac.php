@@ -34,7 +34,7 @@
 					    	<input type="text" class="form-control" id="no_po" name="no_po" placeholder="No PO" value="<?php if(isset($no_po)){echo $no_po;}?>" >
 					    </div>
 					  </div>
-					  <div class="form-group">
+					   <div class="form-group">
 					    <label for="no_do" class="col-sm-4 control-label">No Do</label>
 					    <div class="col-sm-6">
 					    	<input type="text" class="form-control" id="no_do" name="no_do" placeholder="No DO" value="<?php if(isset($no_do)){echo $no_do;}?>" >
@@ -52,12 +52,55 @@
 					      <input type="number" class="form-control" id="no_it" name="no_it" placeholder="No IT" value="<?php if(isset($no_it)){echo $no_it;}?>" >
 					    </div>
 					  </div>
-					  <div class="form-group">
-					    <label for="sn" class="col-sm-4 control-label">Serial Number</label>
-					    <div class="col-sm-6">
-					      <input type="text" class="form-control" id="sn" name="sn" placeholder="Serial Number" value="<?php if(isset($sn)){echo $sn;}?>" >
-					    </div>
-					  </div>
+
+					<div class="form-group">
+						<label for="sn_imac" class="col-sm-4 control-label">Serial Number IMAC</label>
+						<div class="col-sm-6">
+						  <input type="text" class="form-control" id="sn_imac" name="sn_imac" placeholder="Serial Number IMAC" value="<?php if(isset($sn_imac)){echo $sn_imac;}?>" >
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="sn_keyboard" class="col-sm-4 control-label">Serial Number Keyboard</label>
+						<div class="col-sm-6">
+						  <input type="text" class="form-control" id="sn_keyboard" name="sn_keyboard" placeholder="Serial Number Keyboard" value="<?php if(isset($sn_keyboard)){echo $sn_keyboard;}?>" >
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="sn_mouse" class="col-sm-4 control-label">Serial Number Mouse</label>
+						<div class="col-sm-6">
+						  <input type="text" class="form-control" id="sn_mouse" name="sn_mouse" placeholder="Serial Number Mouse" value="<?php if(isset($sn_mouse)){echo $sn_mouse;}?>" >
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="nama_imac" class="col-sm-4 control-label">Nama IMAC</label>
+						<div class="col-sm-6">
+						  <input type="text" class="form-control" id="nama_imac" name="nama_imac" placeholder="Nama IMAC" value="<?php if(isset($nama_imac)){echo $nama_imac;}?>" >
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-lg-6">
+					
+					<div class="form-group">
+						<label for="ups_imac" class="col-sm-4 control-label">UPS</label>
+						<div class="col-sm-6">
+							<select id="ups_imac" name="ups_imac" class="select2" style="width:300px">
+								<?php
+									if($id_ups != 0){ 
+										echo "<option value=0 >Pilih</option>";
+										echo "<option value='$id_ups' selected>".$sn_ups."</option>";
+									}
+									else{ 
+										echo "<option value=0 selected>Pilih</option>";
+									}
+									foreach ($listUPS->result() as $row) {
+										echo "<option value='$row->id'>".$row->sn."</option>";
+									}
+								?>
+							</select>
+							<input type="hidden" name="ups_old" id="ups_old" value="<?php echo $id_ups;?>">
+						</div>
+					</div>
 					 <div class="form-group">
 					    <label for="type" class="col-sm-4 control-label">Type</label>
 					    <div class="col-sm-6">

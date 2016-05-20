@@ -35,36 +35,32 @@
 								<td><?php if(isset($no_it)){echo $no_it;}?></td>
 							</tr>
 							<tr>
-								<td><b>Service Tag</b></td>
-								<td><?php if(isset($service_tag)){echo $service_tag;}?></td>
+								<td><b>Serial Number Laptop</b></td>
+								<td><?php if(isset($sn_lp)){echo $sn_lp;}?></td>
 							</tr>
 							<tr>
-								<td><b>Serial Number</b></td>
-								<td><?php if(isset($sn_cpu)){echo $sn_cpu;}?></td>
+								<td><b>Serial Number Hardisk</b></td>
+								<td><?php if(isset($sn_hd)){echo $sn_hd;}?></td>
 							</tr>
 							<tr>
-								<td><b>Nama PC</b></td>
-								<td><?php if(isset($nama_pc)){echo $nama_pc;}?></td>
+								<td><b>Serial Number Baterai</b></td>
+								<td><?php if(isset($sn_baterai)){echo $sn_baterai;}?></td>
 							</tr>
 							<tr>
-								<td><b>Monitor</b></td>
-								<td><?php if(isset($sn_mon1)){echo $sn_mon1;}?></td>
+								<td><b>Serial Number Charger</b></td>
+								<td><?php if(isset($sn_charger)){echo $sn_charger;}?></td>
+							</tr>
+							<tr>
+								<td><b>Nama Laptop</b></td>
+								<td><?php if(isset($nama_laptop)){echo $nama_laptop;}?></td>
+							</tr>
+							<tr>
+								<td><b>Kode Laptop</b></td>
+								<td><?php if(isset($kode_laptop)){echo $kode_laptop;}?></td>
 							</tr>
 							<tr>
 								<td><b>Monitor Ext</b></td>
-								<td><?php if(isset($sn_mon2)){echo $sn_mon2;}?></td>
-							</tr>
-							<tr>
-								<td><b>Keyboard</b></td>
-								<td><?php if(isset($sn_keyboard)){echo $sn_keyboard;}?></td>
-							</tr>
-							<tr>
-								<td><b>Mouse</b></td>
-								<td><?php if(isset($sn_mouse)){echo $sn_mouse;}?></td>
-							</tr>
-							<tr>
-								<td><b>UPS</b></td>
-								<td><?php if(isset($sn_ups)){echo $sn_ups;}?></td>
+								<td><?php if(isset($sn_mon1)){echo $sn_mon1;}?></td>
 							</tr>
 						</tbody>
 					</table>
@@ -75,6 +71,7 @@
 					<br />
 					<table class="table">
 						<tbody>
+							
 							<tr>
 								<td><b>Type</b></td>
 								<td><?php if(isset($type)){echo $type;}?></td>

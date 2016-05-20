@@ -55,8 +55,8 @@
 						    			echo "<td>".$row->sn_imac."</td>";
 						    			echo "<td>".$row->nama_imac."</td>";
 						    			echo "<td>".$row->user."</td>";
-						    			$link_edit = site_url('/edit/cpu/'.$row->id);
-						    			$link_detail = site_url('/detail/cpu/'.$row->id);
+						    			$link_edit = site_url('/edit/imac/'.$row->id);
+						    			$link_detail = site_url('/detail/imac/'.$row->id);
 						    			echo "<td><a href='$link_detail' target='_blank'>Detail</a> | <a href='$link_edit'>Edit</a> | Delete</td>";
 						    			echo "</tr>";
 						    		}

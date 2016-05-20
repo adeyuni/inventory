@@ -35,46 +35,17 @@
 								<td><?php if(isset($no_it)){echo $no_it;}?></td>
 							</tr>
 							<tr>
-								<td><b>Service Tag</b></td>
-								<td><?php if(isset($service_tag)){echo $service_tag;}?></td>
-							</tr>
-							<tr>
 								<td><b>Serial Number</b></td>
-								<td><?php if(isset($sn_cpu)){echo $sn_cpu;}?></td>
+								<td><?php if(isset($sn_smartphone)){echo $sn_smartphone;}?></td>
 							</tr>
 							<tr>
-								<td><b>Nama PC</b></td>
-								<td><?php if(isset($nama_pc)){echo $nama_pc;}?></td>
+								<td><b>IMEI 1</b></td>
+								<td><?php if(isset($imei1)){echo $imei1;}?></td>
 							</tr>
 							<tr>
-								<td><b>Monitor</b></td>
-								<td><?php if(isset($sn_mon1)){echo $sn_mon1;}?></td>
+								<td><b>IMEI 2</b></td>
+								<td><?php if(isset($imei2)){echo $imei2;}?></td>
 							</tr>
-							<tr>
-								<td><b>Monitor Ext</b></td>
-								<td><?php if(isset($sn_mon2)){echo $sn_mon2;}?></td>
-							</tr>
-							<tr>
-								<td><b>Keyboard</b></td>
-								<td><?php if(isset($sn_keyboard)){echo $sn_keyboard;}?></td>
-							</tr>
-							<tr>
-								<td><b>Mouse</b></td>
-								<td><?php if(isset($sn_mouse)){echo $sn_mouse;}?></td>
-							</tr>
-							<tr>
-								<td><b>UPS</b></td>
-								<td><?php if(isset($sn_ups)){echo $sn_ups;}?></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-
-				<div class="col-lg-6">
-					<br />
-					<br />
-					<table class="table">
-						<tbody>
 							<tr>
 								<td><b>Type</b></td>
 								<td><?php if(isset($type)){echo $type;}?></td>
@@ -87,6 +58,16 @@
 								<td><b>Vendor</b></td>
 								<td><?php if(isset($vendor)){echo $vendor;}?></td>
 							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="col-lg-6">
+					<br />
+					<br />
+					<table class="table">
+						<tbody>
+							
 							<tr>
 								<td><b>Tanggal Terima</b></td>
 								<td><?php if(isset($tgl_terima)){echo $tgl_terima;}?></td>

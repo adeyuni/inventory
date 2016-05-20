@@ -55,7 +55,19 @@
 					  <div class="form-group">
 					    <label for="sn" class="col-sm-4 control-label">Serial Number</label>
 					    <div class="col-sm-6">
-					      <input type="text" class="form-control" id="sn" name="sn" placeholder="Serial Number" value="<?php if(isset($sn)){echo $sn;}?>" >
+					      <input type="text" class="form-control" id="sn" name="sn" placeholder="Serial Number" value="<?php if(isset($sn_smartphone)){echo $sn_smartphone;}?>" >
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="imei1" class="col-sm-4 control-label">IMEI 1</label>
+					    <div class="col-sm-6">
+					      <input type="text" class="form-control" id="imei1" name="imei1" placeholder="IMEI 1" value="<?php if(isset($imei1)){echo $imei1;}?>" >
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="imei1" class="col-sm-4 control-label">IMEI 2</label>
+					    <div class="col-sm-6">
+					      <input type="text" class="form-control" id="imei2" name="imei2" placeholder="IMEI 2" value="<?php if(isset($imei2)){echo $imei2;}?>" >
 					    </div>
 					  </div>
 					 <div class="form-group">
@@ -78,7 +90,7 @@
 					  </div>
 					  <div class="form-group">
 					    <label for="tgl_terima" class="col-sm-4 control-label">Tanggal Terima</label>
-					    <div class="col-sm-4">
+					    <div class="col-sm-6">
 					      <input type="date" class="form-control" id="tgl_terima" name="tgl_terima" placeholder="Tanggal Terima" value="<?php if(isset($tgl_terima)){echo $tgl_terima;}?>" >
 					    </div>
 					  </div>
@@ -113,7 +125,7 @@
 					  </div>
 					  <div class="form-group">
 					    <label for="location" class="col-sm-4 control-label">Location</label>
-					    <div class="col-sm-4">
+					    <div class="col-sm-6">
 					      <select  name="location" id="location" class="form-control" required>
 					      	<option value="">Pilih</option>
 						    <?php

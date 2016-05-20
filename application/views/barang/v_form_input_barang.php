@@ -37,6 +37,12 @@
 					    </div>
 					  </div>
 					  <div class="form-group">
+					    <label for="no_do" class="col-sm-2 control-label">No DO</label>
+					    <div class="col-sm-4">
+					      <input type="text" class="form-control" id="no_do" name="no_do" placeholder="No DO" value="<?php if(isset($no_do)){echo $no_do;}?>"  >
+					    </div>
+					  </div>
+					  <div class="form-group">
 					    <label for="no_asset" class="col-sm-2 control-label">No Asset</label>
 					    <div class="col-sm-4">
 					      <input type="text" class="form-control" id="no_asset" name="no_asset" placeholder="No Asset" value="<?php if(isset($no_asset)){echo $no_asset;}?>" >
@@ -113,7 +119,7 @@
 					    			$pic = explode(",", $listOfPic);
 					    		}
 					    	?>
-					      <select class="selectpicker" name="pic[]" id="pic" multiple data-done-button="true" required>
+					      <select class="selectpicker" name="pic[]" id="pic" multiple data-actions-box="true" required>
 						    <?php
 								foreach ($listPIC->result() as $row) {
 									if($pic[0]== $row->id || $pic[1]== $row->id || $pic[2]== $row->id || $pic[3]== $row->id || $pic[4]== $row->id || $pic[5]== $row->id || $pic[6]== $row->id){
@@ -131,6 +137,30 @@
 					    <label for="user" class="col-sm-2 control-label">User</label>
 					    <div class="col-sm-4">
 					      <input type="text" class="form-control" id="user" name="user" placeholder="User" value="<?php if(isset($user)){echo $user;}?>" >
+					    </div>
+					  </div>
+					   <div class="form-group">
+					    <label for="location" class="col-sm-2 control-label">Location</label>
+					    <div class="col-sm-2">
+					      <select  name="location" id="location" class="form-control" required>
+					      	<option value="">Pilih</option>
+						    <?php
+								foreach ($listLocation->result() as $row) {
+									if($location == $row->id){
+										echo "<option value='$row->id' selected>".$row->nama."</option>";
+									}
+									else{
+										echo "<option value='$row->id'>".$row->nama."</option>";
+									}
+								}
+							?>
+						  </select>
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="user" class="col-sm-2 control-label">Keterangan</label>
+					    <div class="col-sm-4">
+					      <textarea class="form-control" name="ket" id="ket" style="height:100px"><?php if(isset($ket)){echo $ket;}?></textarea>
 					    </div>
 					  </div>
 					  <div class="form-group">

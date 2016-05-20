@@ -6,7 +6,6 @@ class BarangModel extends CI_Model {
 	public function add($table,$data)
 	{
 		
-
 		$q = $this->db->insert($table,$data);
 		
 		return $q;
@@ -42,4 +41,30 @@ class BarangModel extends CI_Model {
 
 		return $q; 
 	}
+
+	//update data untuk scanner dan printer
+	public function update_peripheral($id, $jenis, $table, $criteria)
+	{
+		$query = $this->db->update($table, $criteria, array('id' => $id, 'nama' => $jenis));
+
+		return $query;
+	}
+
+	//insert rekap
+	public function insert_rekap($table, $data){
+		$data['query'] = $this->db->insert($table, $data);
+		$data['rekap_id'] = $this->db->insert_id();
+		
+		return $data;
+	}
+
+	//delete detail  barang
+	public function delete_dtl_barang($id_rekap, $id_dtl)
+	{
+		$q = $this->db->delete("rekap_dtl", array('rekap_dtl_id_rekap' => $id_rekap, 'rekap_dtl_id' => $id_dtl));
+
+		return $q; 
+	}
+
+
 }

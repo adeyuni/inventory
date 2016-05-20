@@ -29,6 +29,12 @@
 					    </div>
 					  </div>
 					  <div class="form-group">
+					    <label for="nama_barang" class="col-sm-4 control-label">Nama Barang</label>
+					    <div class="col-sm-6">
+					    	<input type="text" class="form-control" id="nama_barang" name="nama_barang" placeholder="Nama Barang" value="<?php if(isset($nama_barang)){echo $nama_barang;}?>" >
+					    </div>
+					  </div>
+					  <div class="form-group">
 					    <label for="no_po" class="col-sm-4 control-label">No Po</label>
 					    <div class="col-sm-6">
 					    	<input type="text" class="form-control" id="no_po" name="no_po" placeholder="No PO" value="<?php if(isset($no_po)){echo $no_po;}?>" >

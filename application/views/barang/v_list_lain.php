@@ -55,9 +55,9 @@
 						    			echo "<td>".$row->nama."</td>";
 						    			echo "<td>".$row->sn."</td>";
 						    			echo "<td>".$row->user."</td>";
-						    			$link_edit = site_url('/edit/cpu/'.$row->id);
-						    			$link_detail = site_url('/detail/cpu/'.$row->id);
-						    			$link_delete = site_url('/delete/cpu/'.$row->id);
+						    			$link_edit = site_url('/edit/lain/'.$row->id);
+						    			$link_detail = site_url('/detail/lain/'.$row->id);
+						    			$link_delete = site_url('/delete/lain/'.$row->id);
 						    			echo "<td><a href='$link_detail' target='_blank'>Detail</a> | <a href='$link_edit'>Edit</a> | <a href='$link_delete' onclick='return konfirmasi()'>Delete</a></td>";
 						    			echo "</tr>";
 						    		}

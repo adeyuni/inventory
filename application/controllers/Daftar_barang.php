@@ -107,7 +107,7 @@ class daftar_barang extends CI_Controller {
 		$this->data['additional'] = "daftar_barang.php";
 		$this->data['jenis_barang'] = 200;
 		
-		$this->data['title'] = 'Daftar Laptop';
+		$this->data['title'] = 'Daftar Smartphone';
 		$this->load->template('barang/v_list_smartphone', $this->data);
 	}
 
@@ -118,7 +118,7 @@ class daftar_barang extends CI_Controller {
 		$this->data['additional'] = "daftar_barang.php";
 		$this->data['jenis_barang'] = 300;
 		
-		$this->data['title'] = 'Daftar Laptop';
+		$this->data['title'] = 'Daftar IMAC';
 		$this->load->template('barang/v_list_imac', $this->data);
 	}
 

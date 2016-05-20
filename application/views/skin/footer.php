@@ -9,6 +9,8 @@
 	<script src="<?php echo site_url();?>assets/js/bootstrap-select.js"></script>
 	<script src="<?php echo site_url();?>assets/js/select2.js"></script>
 	<script src="<?php echo site_url();?>assets/js/bootstrap-table.js"></script>
+
+	
 	<?php 
 	if(isset($additional)){
 		include $additional;
