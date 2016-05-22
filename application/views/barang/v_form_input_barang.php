@@ -9,7 +9,6 @@
 			<!-- <div class="panel-heading"></div> -->
 			<?php if(isset($msg)){echo $msg;}?>
 			<div class="panel-body">
-				
 				<form class="form-horizontal" action="<?php echo site_url($action);?>" method="POST"> 
 				  <div class="form-group">
 				    <label for="jenis_barang" class="col-sm-2 control-label">Jenis Barang</label>

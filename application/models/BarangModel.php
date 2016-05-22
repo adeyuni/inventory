@@ -43,19 +43,27 @@ class BarangModel extends CI_Model {
 	}
 
 	//update data untuk scanner dan printer
-	public function update_peripheral($id, $jenis, $table, $criteria)
+	public function update_peripheral($id, $jenis, $table, $data)
 	{
-		$query = $this->db->update($table, $criteria, array('id' => $id, 'nama' => $jenis));
+		$query = $this->db->update($table, $data, array('id' => $id, 'nama' => $jenis));
 
 		return $query;
 	}
 
+	/* on controller rekap*/
 	//insert rekap
 	public function insert_rekap($table, $data){
 		$data['query'] = $this->db->insert($table, $data);
 		$data['rekap_id'] = $this->db->insert_id();
 		
 		return $data;
+	}
+
+	public function update_rekap($id_rekap, $data)
+	{
+		$update = $this->db->update('rekap', $data, array('rekap_id' => $id_rekap));
+
+		return $update;
 	}
 
 	//delete detail  barang

@@ -12,11 +12,70 @@ class barang extends CI_Controller {
 		$this->load->model('BarangModel', 'MBarang');
 	}
 
+	public function add($no_po = null, $dtl_barang = null, $jenis_barang = null)
+	{
+		$this->data['listPO'] = $this->MBarang->get_data('rekap','');
+		$this->data['listBarang'] = $this->MBarang->get_data('type_barang','');
+		$this->data['selectedPO'] = $no_po;
+		$this->data['selectedJenisBarang'] = $jenis_barang;
+		$this->data['showDtl'] = false;
+		$this->data['showJenisBarang'] = false;
+		if($no_po != 999999 and $no_po != null){
+			$this->data['showDtl'] = true;
+			$this->data['showJenisBarang'] = true;
+			$this->data['viewDtl'] = "additional/detail_barang.php";
 
-	public function add()
+			if($dtl_barang != null){
+				$this->data['selectedDtlBarang'] = $dtl_barang;
+			}
+			$this->data['listDtlBarang'] = $this->MBarang->get_data('rekap_dtl',array('rekap_dtl_id_rekap' => $no_po));
+		}elseif($no_po == 999999){
+			$this->data['showJenisBarang'] = true;
+		}
+
+		//for form used
+		if($jenis_barang == 1){
+			$this->data['formInputBarang'] = "additional/v_form_cpu.php";
+		}elseif($jenis_barang == 100){
+			$this->data['formInputBarang'] = "additional/v_form_laptop.php";
+		}elseif($jenis_barang == 200){
+			$this->data['formInputBarang'] = "additional/v_form_smartphone.php";
+		}elseif($jenis_barang == 300){
+			$this->data['formInputBarang'] = "additional/v_form_imac.php";
+		}else{
+			$this->data['formInputBarang'] = "additional/v_form_barang.php";
+		}
+		$this->data['title'] = 'Asseting Barang';
+		$this->data['action'] = 'barang/add';
+		$this->data['additional'] = "include/plus_form_add_barang.php";
+		$this->load->template('barang/add/v_form_add_barang', $this->data);
+	}
+	
+	//ajax to get barang
+	public function get_barang($no_po = null)
+	{
+		$data['listDtlBarang'] = $this->MBarang->get_data('rekap_dtl',array('rekap_dtl_id_rekap' => $no_po));
+
+		$this->load->view('ajax/daftar_barang',$data);
+	}
+
+	//ajax to get form-input
+	public function get_form_input($jenis_barang = null)
+	{
+		if($jenis_barang == 1){
+			$this->data['listKeyboard'] = $this->MBarang->get_data('keyboard',array('user is null or user = ""' => null));
+			$this->data['listMouse'] = $this->MBarang->get_data('mouse',array('user is null or user = ""' => null));
+			$this->data['listUPS'] = $this->MBarang->get_data('ups',array('user is null or user = ""' => null));
+			$this->data['listMonitor'] = $this->MBarang->get_data('monitor',array('user is null or user = ""' => null));
+			$this->load->view('ajax/v_form_input_cpu', $this->data);
+		}else{
+			$this->load->view('ajax/v_form_input_barang');
+		}
+	}
+
+	public function add2()
 	{
 		$this->data['msg'] = '';
-
 		$submit = $this->input->post('submit');
 
 		if($submit == 'Tambah'){

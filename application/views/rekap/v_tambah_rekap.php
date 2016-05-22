@@ -26,26 +26,10 @@
 									
 									<?php
 										if($isEditing==true){
-											for($i=0;$i<$jmlBarang;$i++){
-												if($i==0){
-													echo '<table width="100%">
-															<tr>
-																<td width="25%">Nama Barang</td>
-																<td><input type="text" name="nama_barang[0]" class="form-control" placeholder="Nama Barang" value='.$nama_barang[0].' required></td>
-															</tr>
-															<tr>
-																<td width="25%">Harga</td>
-																<td><input type="text" name="harga[0]" class="form-control" placeholder="Harga Barang" value='.$harga[0].' required></td>
-															</tr>
-															<tr>
-																<td width="25%">Jumlah</td>
-																<td><input type="number" name="jml[0]" class="form-control" placeholder="Jumlah Barang" value='.$jml[0].' required></td>
-															</tr>
-														</table>';
-												}
-												else{
-													?>
+											for($i=0;$i<$jmlBarang;$i++){?>
+													<?php if($i != 0){?>
 													<a href="<?php echo site_url('rekap/deleteDtlBarang/'.$id_rekap.'/'.$id_dtl[$i]); ?>" onclick="return confirm('Hapus <?php echo $nama_barang[$i]; ?>?')"><button type="button" class="btn btn-sm btn-danger">Hapus</button></a>
+													<?php }?>
 														<table width="100%">
 															<tr>
 																<td width="25%">Nama Barang</td>
@@ -62,7 +46,7 @@
 														</table>
 														
 													<?php
-												}
+												
 											}
 										}else{ ?>
 											<table width="100%">
@@ -140,7 +124,7 @@
 					  </div>
 					  <div class="form-group">
 					    <div class="col-sm-offset-2 col-sm-4">
-					      <input type="submit" name="submit" id="submit" class="btn btn-sm btn-info" value="Tambah"> <br />
+					      <input type="submit" name="submit" id="submit" class="btn btn-sm btn-info" value="Submit"> <br />
 
 					    </div>
 					  </div>
