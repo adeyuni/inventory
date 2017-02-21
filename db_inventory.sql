@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 31, 2017 at 05:46 PM
+-- Generation Time: Feb 05, 2017 at 05:41 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.5.35
 
@@ -402,7 +402,6 @@ INSERT INTO `as_cpu` (`as_cpu_id`, `as_cpu_cpu_id`, `as_cpu_mon1_id`, `as_cpu_mo
 (381, 322, 0, 0, 0, 3814, 598, 0, 1, '2017-01-31 18:40:01', NULL, NULL),
 (382, 323, 5450, 0, 0, 3815, 599, 0, 1, '2017-01-31 18:40:01', NULL, NULL),
 (383, 324, 5451, 0, 0, 3816, 600, 4887, 1, '2017-01-31 18:40:01', NULL, NULL),
-(384, 325, 5452, 0, 0, 3817, 601, 0, 1, '2017-01-31 18:40:01', NULL, NULL),
 (385, 326, 5453, 0, 0, 3818, 602, 4888, 1, '2017-01-31 18:40:01', NULL, NULL),
 (386, 327, 0, 0, 0, 3819, 603, 0, 1, '2017-01-31 18:40:01', NULL, NULL),
 (387, 328, 5454, 0, 0, 3820, 604, 4889, 1, '2017-01-31 18:40:01', NULL, NULL),
@@ -716,7 +715,8 @@ INSERT INTO `as_laptop` (`as_laptop_id`, `as_laptop_laptop_id`, `as_laptop_mouse
 (237, 264, 5837, NULL, 1, '2017-01-31 22:57:17', NULL, NULL),
 (238, 265, 5838, NULL, 1, '2017-01-31 22:57:17', NULL, NULL),
 (239, 266, 5839, NULL, 1, '2017-01-31 22:57:17', NULL, NULL),
-(240, 267, 5840, NULL, 1, '2017-01-31 22:57:17', NULL, NULL);
+(240, 267, 5840, NULL, 1, '2017-01-31 22:57:17', NULL, NULL),
+(241, 30, 0, 0, 1, '2017-02-02 22:51:16', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1082,7 +1082,7 @@ INSERT INTO `barang` (`barang_id`, `barang_no_po`, `barang_rekap_dtl_id`, `baran
 (598, 1, 3, 4, NULL, NULL, 'CN-09RRC7-48729-52E-0BP5', 'spare 12 (ade chandra)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-29 22:04:44', 1, '2017-01-31 18:40:01'),
 (599, 1, 3, 4, NULL, NULL, 'CN-09RRC7-48729-52E-0509', 'spare 14 (Hendri Volta)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-29 22:04:44', 1, '2017-01-31 18:40:01'),
 (600, 1, 3, 4, NULL, NULL, 'CN-09RRC7-48729-52E-028P', 'spare 15 (yuni widiasih)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-29 22:04:44', 1, '2017-01-31 18:40:01'),
-(601, 1, 3, 4, NULL, NULL, 'CN-09RRC7-48729-52E-02SS', 'Azizah Purwitasari', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-29 22:04:44', 1, '2017-01-31 18:40:01'),
+(601, 1, 3, 4, NULL, NULL, 'CN-09RRC7-48729-52E-02SS', NULL, 0, 2, 0, 0, 1, NULL, 1, '2017-01-29 22:04:44', 1, '2017-01-31 18:40:01'),
 (602, 1, 3, 4, NULL, NULL, 'CN-09RRC7-48729-52C-0B1Y', 'spare 16 (Vina)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-29 22:04:44', 1, '2017-01-31 18:40:01'),
 (603, 1, 3, 4, NULL, NULL, 'CN-09RRC7-48729-52E-02UT', 'spare 17  (yoga pemungkas)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-29 22:04:44', 1, '2017-01-31 18:40:01'),
 (604, 1, 3, 4, NULL, NULL, 'CN-09RRC7-48729-52E-02TW', 'spare 19 (eka sriningsih)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-29 22:04:44', 1, '2017-01-31 18:40:01'),
@@ -1441,7 +1441,7 @@ INSERT INTO `barang` (`barang_id`, `barang_no_po`, `barang_rekap_dtl_id`, `baran
 (3814, 1, 2, 3, '', '', 'MY04G481716195351993', 'spare 12 (ade chandra)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-29 22:43:54', 1, '2017-01-31 18:40:01'),
 (3815, 1, 2, 3, '', '', 'MY04G4817161953A0983', 'spare 14 (Hendri Volta)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-29 22:43:54', 1, '2017-01-31 18:40:01'),
 (3816, 1, 2, 3, '', '', 'MY04G481716195352917', 'spare 15 (yuni widiasih)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-29 22:43:54', 1, '2017-01-31 18:40:01'),
-(3817, 1, 2, 3, '', '', 'MY04G481716195353126', 'Azizah Purwitasari', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-29 22:43:54', 1, '2017-01-31 18:40:01'),
+(3817, 1, 2, 3, '', '', 'MY04G481716195353126', NULL, 0, 2, 0, 0, 1, NULL, 1, '2017-01-29 22:43:54', 1, '2017-01-31 18:40:01'),
 (3818, 1, 2, 3, '', '', 'MY04G481716195353039', 'spare 16 (Vina)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-29 22:43:54', 1, '2017-01-31 18:40:01'),
 (3819, 1, 2, 3, '', '', 'MY04G4817161953A1531', 'spare 17  (yoga pemungkas)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-29 22:43:54', 1, '2017-01-31 18:40:01'),
 (3820, 1, 2, 3, '', '', 'MY04G481716195352912', 'spare 19 (eka sriningsih)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-29 22:43:54', 1, '2017-01-31 18:40:01'),
@@ -2098,7 +2098,7 @@ INSERT INTO `barang` (`barang_id`, `barang_no_po`, `barang_rekap_dtl_id`, `baran
 (5449, 5, 7, 2, '', '', 'CN-0HHGGM-64180-528-07AU', 'spare 10 (irene.k.d.saputro)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-30 17:22:50', 1, '2017-01-31 18:40:01'),
 (5450, 5, 7, 2, '', '', 'CN-022R0T-72872-4AL-EGAM', 'spare 14 (Hendri Volta)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-30 17:22:50', 1, '2017-01-31 18:40:01'),
 (5451, 5, 7, 2, '', '', 'CN-0HHGGM-64180-4BQ-1ERU', 'spare 15 (yuni widiasih)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-30 17:22:50', 1, '2017-01-31 18:40:01'),
-(5452, 5, 7, 2, '', '', 'CN-022R0T-72872-3CE-G5UM', 'Azizah Purwitasari', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-30 17:22:50', 1, '2017-01-31 18:40:01'),
+(5452, 5, 7, 2, '', '', 'CN-022R0T-72872-3CE-G5UM', NULL, 0, 2, 0, 0, 1, NULL, 1, '2017-01-30 17:22:50', 1, '2017-01-31 18:40:01'),
 (5453, 5, 7, 2, '', '', 'CN-022R0T-72872-3CE-G62M', 'spare 16 (Vina)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-30 17:22:50', 1, '2017-01-31 18:40:01'),
 (5454, 5, 7, 2, '', '', 'CN-0X0T4K-72872-51S-A6JB', 'spare 19 (eka sriningsih)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-30 17:22:50', 1, '2017-01-31 18:40:01'),
 (5455, 5, 7, 2, '', '', 'CN-022R0T-72872-3CE-G77M', 'spare 20 (rangga dhamaswara)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-30 17:22:50', 1, '2017-01-31 18:40:01'),
@@ -2728,7 +2728,7 @@ INSERT INTO `cpu` (`cpu_id`, `cpu_no_po`, `cpu_rekap_dtl_id`, `cpu_no_asset`, `c
 (322, 1, 1, NULL, NULL, '20BR252', NULL, 'GDN-PC-717', 'spare 12 (ade chandra)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-29 21:39:29', 1, '2017-01-31 18:40:01'),
 (323, 1, 1, NULL, NULL, '9R8R252', NULL, 'GDN-PC-719', 'spare 14 (Hendri Volta)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-29 21:39:29', 1, '2017-01-31 18:40:01'),
 (324, 1, 1, NULL, NULL, 'HD8R252', NULL, 'GDN-PC-717', 'spare 15 (yuni widiasih)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-29 21:39:29', 1, '2017-01-31 18:40:01'),
-(325, 1, 1, NULL, NULL, '9S8R252', NULL, 'GDN-PC-722', 'Azizah Purwitasari', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-29 21:39:29', 1, '2017-01-31 18:40:01'),
+(325, 1, 1, NULL, NULL, '9S8R252', NULL, 'GDN-PC-722', NULL, NULL, 2, 0, 0, 1, NULL, 1, '2017-01-29 21:39:29', 1, '2017-01-31 18:40:01'),
 (326, 1, 1, NULL, NULL, 'DB8R252', NULL, 'GDN-PC-725', 'spare 16 (Vina)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-29 21:39:29', 1, '2017-01-31 18:40:01'),
 (327, 1, 1, NULL, NULL, '3BBR252', NULL, 'GDN-PC-723', 'spare 17  (yoga pemungkas)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-29 21:39:29', 1, '2017-01-31 18:40:01'),
 (328, 1, 1, NULL, NULL, '5M9R252', NULL, 'GDN-PC-727', 'spare 19 (eka sriningsih)', NULL, 2, 0, 1, 1, NULL, 1, '2017-01-29 21:39:29', 1, '2017-01-31 18:40:01');
@@ -2893,7 +2893,10 @@ INSERT INTO `ex_barang` (`barang_id`, `barang_no_po`, `barang_rekap_dtl_id`, `ba
 (5428, 5, 7, 2, '', '', 'CN-03XNMH-64180-25E-48LS', 'SPARE- Nex-nike developer', NULL, 2, 0, 0, NULL, 1, '2017-01-31 21:52:27', NULL, NULL),
 (3789, 1, 2, 3, '', '', 'CN-0T347F716160760T6VA01', 'SPARE- Nex-nike developer', NULL, 2, 0, 0, NULL, 1, '2017-01-31 21:52:27', NULL, NULL),
 (573, 1, 3, 4, 'ITA1509056', '4010915-064', '1530HS002P98', 'SPARE- Nex-nike developer', NULL, 2, 0, 0, NULL, 1, '2017-01-31 21:52:27', NULL, NULL),
-(4867, 4, 6, 5, '', '', '241307325342BX', 'SPARE- Nex-nike developer', NULL, 2, 0, 0, NULL, 1, '2017-01-31 21:52:27', NULL, NULL);
+(4867, 4, 6, 5, '', '', '241307325342BX', 'SPARE- Nex-nike developer', NULL, 2, 0, 0, NULL, 1, '2017-01-31 21:52:27', NULL, NULL),
+(5452, 5, 7, 2, '', '', 'CN-022R0T-72872-3CE-G5UM', 'Azizah Purwitasari', NULL, 2, 0, 0, NULL, 1, '2017-02-02 22:53:47', NULL, NULL),
+(3817, 1, 2, 3, '', '', 'MY04G481716195353126', 'Azizah Purwitasari', NULL, 2, 0, 0, NULL, 1, '2017-02-02 22:53:47', NULL, NULL),
+(601, 1, 3, 4, NULL, NULL, 'CN-09RRC7-48729-52E-02SS', 'Azizah Purwitasari', NULL, 2, 0, 0, NULL, 1, '2017-02-02 22:53:47', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2927,7 +2930,8 @@ CREATE TABLE `ex_cpu` (
 --
 
 INSERT INTO `ex_cpu` (`cpu_id`, `cpu_no_po`, `cpu_rekap_dtl_id`, `cpu_no_asset`, `cpu_no_it`, `cpu_service_tag`, `cpu_sn`, `cpu_hostname`, `cpu_user`, `cpu_department`, `cpu_location`, `cpu_sub_location`, `cpu_status`, `cpu_ket`, `cpu_id_creator`, `cpu_time_create`, `cpu_id_editor`, `cpu_time_edit`) VALUES
-(296, 1, 1, NULL, NULL, '2VNSD2S', NULL, NULL, 'SPARE- Nex-nike developer', NULL, 2, 0, 0, NULL, 1, '2017-01-31 21:52:27', NULL, NULL);
+(296, 1, 1, NULL, NULL, '2VNSD2S', NULL, NULL, 'SPARE- Nex-nike developer', NULL, 2, 0, 0, NULL, 1, '2017-01-31 21:52:27', NULL, NULL),
+(325, 1, 1, NULL, NULL, '9S8R252', NULL, 'GDN-PC-722', 'Azizah Purwitasari', NULL, 2, 0, 0, NULL, 1, '2017-02-02 22:53:47', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -3059,7 +3063,12 @@ INSERT INTO `history_dok` (`history_dok_id`, `history_dok_jenis_dok`, `history_d
 (3, 1, 'FFFB/038/I/2017', 100, 267, 'shirley handoko', 1, '2017-01-31 23:34:03'),
 (4, 1, 'FFFB/040/I/2017', 100, 262, 'Rangga- OPS', 1, '2017-01-31 23:38:30'),
 (5, 1, 'FFFB/041/I/2017', 100, 262, 'Rangga- OPS', 1, '2017-01-31 23:43:40'),
-(6, 1, 'FFFB/042/I/2017', 100, 262, 'Rangga- OPS', 1, '2017-01-31 23:44:04');
+(6, 1, 'FFFB/042/I/2017', 100, 262, 'Rangga- OPS', 1, '2017-01-31 23:44:04'),
+(7, 1, 'FFFB/043/II/2017', 1, 372, 'ni ketut', 1, '2017-02-02 22:14:37'),
+(8, 1, 'FFFB/044/II/2017', 1, 372, 'ni ketut', 1, '2017-02-02 22:17:18'),
+(9, 1, 'FFFB/045/II/2017', 1, 372, 'ni ketut', 1, '2017-02-02 22:22:48'),
+(10, 1, 'FFFB/046/II/2017', 1, 372, 'ni ketut', 1, '2017-02-02 22:23:32'),
+(11, 1, 'FFFB/047/II/2017', 1, 372, 'ni ketut', 1, '2017-02-02 22:24:41');
 
 -- --------------------------------------------------------
 
@@ -3233,7 +3242,7 @@ INSERT INTO `laptop` (`laptop_id`, `laptop_no_po`, `laptop_rekap_dtl_id`, `lapto
 (27, 17, 25, '4010915-058', 'ITA15090050', '5CG5336Z65', '150314RC250FCB2SYE9K', '6DJGHNBRY8M749', 'WCNXB0AGC8O12Z', 'GDN-LTP-527', 'ULTP28', 'Mahindra Widya - hp', NULL, 2, 8, 1, 1, 're done 25/1/16', 1, '2017-01-31 21:19:08', 1, '2017-01-31 22:57:17'),
 (28, 17, 25, '4010915-059', 'ITA15090051', '5CG5336Z53', '150314RC250FCB2TRTBK', '6DJGHNBRY8M78Q', 'WCNXB0AGC8O15L', 'GDN-LTP-528', 'ULTP29', 'VESTAN', NULL, 2, 8, 1, 1, 'VESTAN-25 JULY 2016', 1, '2017-01-31 21:19:08', 1, '2017-01-31 22:57:17'),
 (29, 17, 25, '4010915-060', 'ITA15090052', '5CG5336Z9M', '150314RC250FCB2TS0LK', '6DJGHNBRY8M6V8', 'WCNXB0AGC8O12T', 'GDN-LTP-529', 'ULTP30', NULL, NULL, 2, 8, 0, 1, 'thamrin', 1, '2017-01-31 21:19:08', 1, '2017-01-31 22:57:17'),
-(30, 17, 25, '4010915-061', 'ITA15090053', '5CG5336X88', '150314RC250FCB2SYEBK', '6DJGHNBRY8M7CR', 'WCNXB0AGC8O1BA', 'GDN-LTP-530', 'ULTP31', NULL, NULL, 2, 8, 0, 1, 'trackball hilang- terakhir mas byant', 1, '2017-01-31 21:19:08', 1, '2017-01-31 22:57:17'),
+(30, 17, 25, '4010915-061', 'ITA15090053', '5CG5336X88', '150314RC250FCB2SYEBK', '6DJGHNBRY8M7CR', 'WCNXB0AGC8O1BA', 'GDN-LTP-530', 'ULTP31', 'testing bro', 1, 2, 4, 1, 1, 'trackball hilang- terakhir mas byant', 1, '2017-01-31 21:19:08', 1, '2017-01-31 22:57:17'),
 (31, 17, 25, '4010915-062', 'ITA15090054', '5CG5336GK8', '150314RC250FCB2TRYHK', '6DJGK56CF8YNZG', 'WCNXB0AGC8NT8M', 'GDN-LTP-531', 'ULTP32', NULL, NULL, 2, NULL, 0, 1, 'ci santiasih ', 1, '2017-01-31 21:19:08', 1, '2017-01-31 22:57:17'),
 (32, 17, 25, '4010915-063', 'ITA15090055', '5CG5336GPY', '150314RC250FCB2SYEEK', '6DJGHNBRY8MNZM', 'WCNXA0D3U8YJJP', 'GDN-LTP-532', 'ULTP33', 'Iwan Setiadi', NULL, 2, 8, 1, 1, 'done', 1, '2017-01-31 21:19:08', 1, '2017-01-31 22:57:17'),
 (33, 17, 25, '4010915-064', 'ITA15090056', '5CG5336GMQ', '150314RC250FCB2TTLWK', '6DJGHNBRY8MMH7', 'WCNXB0AGC8NT8D', 'GDN-LTP-533', 'ULTP34', 'Elsa Maria Pattie', NULL, 2, 8, 1, 1, 'done', 1, '2017-01-31 21:19:08', 1, '2017-01-31 22:57:17'),
@@ -3507,7 +3516,38 @@ INSERT INTO `log_user` (`log_user_id`, `log_user_username`, `log_user_last_login
 (15, 'lidwina', '2017-01-31 16:05:05'),
 (16, 'ade', '2017-01-31 18:23:28'),
 (17, 'admin', '2017-01-31 20:34:29'),
-(18, 'admin', '2017-01-31 23:34:40');
+(18, 'admin', '2017-01-31 23:34:40'),
+(19, 'admin', '2017-02-02 22:14:10'),
+(20, 'admin', '2017-02-05 10:19:11'),
+(21, 'admin', '2017-02-05 15:42:25'),
+(22, 'admin', '2017-02-05 16:38:09'),
+(23, 'ade', '2017-02-05 16:38:55'),
+(24, 'staff', '2017-02-05 16:41:04'),
+(25, 'ade', '2017-02-05 16:52:05'),
+(26, 'staff', '2017-02-05 16:52:40'),
+(27, 'staff', '2017-02-05 16:52:52'),
+(28, 'ade', '2017-02-05 17:01:02'),
+(29, 'admin', '2017-02-05 17:01:12'),
+(30, 'ade', '2017-02-05 20:20:27'),
+(31, 'ade', '2017-02-05 20:51:03'),
+(32, 'ade', '2017-02-05 20:51:27'),
+(33, 'ade', '2017-02-05 22:08:24'),
+(34, 'ade', '2017-02-05 22:31:42'),
+(35, 'ade', '2017-02-05 22:33:04'),
+(36, 'staff', '2017-02-05 22:33:24'),
+(37, 'ade', '2017-02-05 22:34:40'),
+(38, 'staff', '2017-02-05 22:34:55'),
+(39, 'staff', '2017-02-05 22:46:43'),
+(40, 'ade', '2017-02-05 22:47:14'),
+(41, 'admin', '2017-02-05 22:47:32'),
+(42, 'ade', '2017-02-05 22:47:40'),
+(43, 'admin', '2017-02-05 22:47:48'),
+(44, 'ade', '2017-02-05 23:20:51'),
+(45, 'admin', '2017-02-05 23:21:04'),
+(46, 'staff', '2017-02-05 23:34:33'),
+(47, 'admin', '2017-02-05 23:34:47'),
+(48, 'ade.y.triyanto', '2017-02-05 23:37:47'),
+(49, 'admin', '2017-02-05 23:38:00');
 
 -- --------------------------------------------------------
 
@@ -3555,7 +3595,7 @@ CREATE TABLE `no` (
 --
 
 INSERT INTO `no` (`no_id`, `no_val`, `no_ket`) VALUES
-(1, 43, 'no dokumen');
+(1, 49, 'no dokumen');
 
 -- --------------------------------------------------------
 
@@ -3783,7 +3823,7 @@ CREATE TABLE `user` (
   `user_id` int(11) NOT NULL,
   `user_username` varchar(50) NOT NULL,
   `user_password` varchar(255) NOT NULL,
-  `user_status` int(11) NOT NULL DEFAULT '1',
+  `user_role` int(11) NOT NULL DEFAULT '1',
   `user_last_login` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -3791,12 +3831,33 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`user_id`, `user_username`, `user_password`, `user_status`, `user_last_login`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1, '2017-01-31 23:34:40'),
-(3, 'ade', 'e807f1fcf82d132f9bb018ca6738a19f', 1, '2017-01-31 18:23:28'),
-(4, 'yacob', 'e807f1fcf82d132f9bb018ca6738a19f', 1, '2017-01-30 16:07:21'),
-(5, 'joko.moro', 'e807f1fcf82d132f9bb018ca6738a19f', 1, '2016-11-25 16:48:33'),
-(6, 'lidwina', 'e807f1fcf82d132f9bb018ca6738a19f', 1, '2017-01-31 16:05:05');
+INSERT INTO `user` (`user_id`, `user_username`, `user_password`, `user_role`, `user_last_login`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1, '2017-02-05 23:38:00'),
+(3, 'ade.y.triyanto', 'a562cfa07c2b1213b3a5c99b756fc206', 2, '2017-02-05 23:37:47'),
+(4, 'yacob', 'e807f1fcf82d132f9bb018ca6738a19f', 3, '2017-01-30 16:07:21'),
+(5, 'joko.moro', 'e807f1fcf82d132f9bb018ca6738a19f', 3, '2016-11-25 16:48:33'),
+(6, 'lidwina', 'e807f1fcf82d132f9bb018ca6738a19f', 2, '2017-01-31 16:05:05'),
+(7, 'staff', '08f5b04545cbf7eaa238621b9ab84734', 3, '2017-02-05 23:34:33');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_role`
+--
+
+CREATE TABLE `user_role` (
+  `user_role_id` int(11) NOT NULL,
+  `user_role_nama` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user_role`
+--
+
+INSERT INTO `user_role` (`user_role_id`, `user_role_nama`) VALUES
+(1, 'super admin'),
+(2, 'admin'),
+(3, 'staff');
 
 --
 -- Indexes for dumped tables
@@ -3986,6 +4047,12 @@ ALTER TABLE `user`
   ADD UNIQUE KEY `user_username` (`user_username`);
 
 --
+-- Indexes for table `user_role`
+--
+ALTER TABLE `user_role`
+  ADD PRIMARY KEY (`user_role_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -4008,7 +4075,7 @@ ALTER TABLE `as_imac`
 -- AUTO_INCREMENT for table `as_laptop`
 --
 ALTER TABLE `as_laptop`
-  MODIFY `as_laptop_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=241;
+  MODIFY `as_laptop_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=242;
 --
 -- AUTO_INCREMENT for table `as_smartphone`
 --
@@ -4043,7 +4110,7 @@ ALTER TABLE `dtl_location`
 -- AUTO_INCREMENT for table `history_dok`
 --
 ALTER TABLE `history_dok`
-  MODIFY `history_dok_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `history_dok_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `home_location`
 --
@@ -4083,7 +4150,7 @@ ALTER TABLE `location`
 -- AUTO_INCREMENT for table `log_user`
 --
 ALTER TABLE `log_user`
-  MODIFY `log_user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `log_user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 --
 -- AUTO_INCREMENT for table `mutasi`
 --
@@ -4123,7 +4190,7 @@ ALTER TABLE `smartphone`
 -- AUTO_INCREMENT for table `status`
 --
 ALTER TABLE `status`
-  MODIFY `status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `type_barang`
 --
@@ -4133,7 +4200,12 @@ ALTER TABLE `type_barang`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `user_role`
+--
+ALTER TABLE `user_role`
+  MODIFY `user_role_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

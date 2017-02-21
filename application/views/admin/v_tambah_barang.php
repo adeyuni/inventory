@@ -36,7 +36,7 @@
 											<span class="glyphicon glyphicon-pencil"></span> Edit
 										</button>
 									</a>
-									<?php if( ($row->id >= 1 and $row->id <= 8) || ($row->id == 100) || ($row->id == 200) || ($row->id == 300)){ }else{ ?>
+									<?php if( ($row->id >= 1 and $row->id <= 8) || ($row->id == 100) || ($row->id == 200) || ($row->id == 300) || ($row->id == 400)){ }else{ ?>
 									<a href="<?php echo $link_delete;?>">
 			    						<!-- <button type="button" id="add-daftar-no-do" class="btn btn-sm btn-danger" onclick="return confirm('Anda yakin menghapus data ini ?')">
 											<span class="glyphicon glyphicon-trash"></span> Delete

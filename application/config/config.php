@@ -27,8 +27,8 @@ date_default_timezone_set('Asia/Jakarta');
 */
 //$config['base_url'] = 'http://GDN-PC-768/inventory/';
 // $config['base_url'] = 'http://10.176.10.86/inventory/';
-$config['base_url'] = 'http://10.176.10.45/inventory/';
-//$config['base_url'] = 'http://localhost/assets/';
+//$config['base_url'] = 'http://10.176.10.45/inventory/';
+$config['base_url'] = 'http://localhost/assets/';
 
 /*
 |--------------------------------------------------------------------------

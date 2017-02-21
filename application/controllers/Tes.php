@@ -15,11 +15,6 @@ class tes extends CI_Controller {
 		$this->load->view('v_tes',$this->data);
 	}
 
-	public function tes()
-	{
-
-	}
-	
 	public function hasil()
 	{
 		if( $_REQUEST["jenis_barang"] ){
@@ -38,6 +33,31 @@ class tes extends CI_Controller {
 	public function multi()
 	{
 		$this->load->view('v_tes');
+	}
+
+	public function insert_hostname()
+	{
+		$this->db->trans_start();
+
+		for($i=1; $i< 100; $i++){
+			if($i < 10){
+				$number = "00".$i;
+			}elseif($i < 100){
+				$number = "0".$i;
+			}else{
+				$number = $i;
+			}
+
+			echo $hostname = "GDN-MAC-".$number;	
+			
+			$data = array('hostname_nama' => $hostname,
+							'hostname_jenis_barang' => 300);
+
+			$query = $this->MBarang->add('hostname', $data);
+		}
+		
+
+		$this->db->trans_complete();
 	}
 
 	public function pc()
@@ -307,43 +327,51 @@ class tes extends CI_Controller {
 		print_r($fact);
 	}
 
-	public function wow()
-	{
-		echo "tess";
-	}
-
 	public function create()
 	{
 		$this->load->library('excel');
-		$file = "./assets/upload/tes/template.xls";
+		$file = "./assets/upload/tes/template.xlsx";
 
-		echo "string";
-		//load Excel template file
-		$objTpl = PHPExcel_IOFactory::load($file);
-		// $objTpl->setActiveSheetIndex(0);  //set first sheet as active
-		 
-		// $objTpl->getActiveSheet()->setCellValue('C2', date('Y-m-d'));  //set C1 to current date
-		// $objTpl->getActiveSheet()->getStyle('C2')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_RIGHT); //C1 is right-justified
-		 
-		// $objTpl->getActiveSheet()->setCellValue('C3', stripslashes($_POST['txtName']));
-		// $objTpl->getActiveSheet()->setCellValue('C4', stripslashes($_POST['txtMessage']));
-		 
-		// $objTpl->getActiveSheet()->getStyle('C4')->getAlignment()->setWrapText(true);  //set wrapped for some long text message
-		 
-		// $objTpl->getActiveSheet()->getColumnDimension('C')->setWidth(40);  //set column C width
-		// $objTpl->getActiveSheet()->getRowDimension('4')->setRowHeight(120);  //set row 4 height
-		// $objTpl->getActiveSheet()->getStyle('A4:C4')->getAlignment()->setVertical(PHPExcel_Style_Alignment::VERTICAL_TOP); //A4 until C4 is vertically top-aligned
-		 
-		//prepare download
-		$filename = 'asdhj.xls'; //just some random filename
-		header('Content-Type: application/vnd.ms-excel');
-		header('Content-Disposition: attachment;filename="'.$filename.'"');
+		// Create new PHPExcel object
+		$objPHPExcel = PHPExcel_IOFactory::load($file);
+
+		//insert data
+		$objWorksheet = $objPHPExcel->getActiveSheet();
+
+		$nama = 'Ade Yuni Triyanto';
+		$objWorksheet->setCellValue('C4', 'FFFBBB/12/XXX/1111');  //nomor
+		$objWorksheet->setCellValue('H4', date('d/m/Y'));  //tanggal
+		$objWorksheet->setCellValue('C6', $nama); //nama
+
+		//Detail Permohonan
+		$objWorksheet->setCellValue('D14', 'Tes'); 
+		$objWorksheet->setCellValue('D15', 'Tes'); 
+		$objWorksheet->setCellValue('D16', 'Tes'); 
+		$objWorksheet->setCellValue('D17', 'Tes'); 
+		$objWorksheet->setCellValue('D18', 'Tes');
+
+		//Informasi Aset
+		$objWorksheet->setCellValue('D21', 'Tes');
+		$objWorksheet->setCellValue('D22', 'Tes');
+		$objWorksheet->setCellValue('D23', 'Tes');
+		$objWorksheet->setCellValue('D24', 'Tes');
+		$objWorksheet->setCellValue('D25', 'Tes');
+		$objWorksheet->setCellValue('D26', 'Tes');
+		$objWorksheet->setCellValue('D27', 'Tes');
+		$objWorksheet->setCellValue('D28', 'Tes'); 
+
+		// Set active sheet index to the first sheet, so Excel opens this as the first sheet
+		$objPHPExcel->setActiveSheetIndex(0);
+
+		$name_file = "Form_".$nama.".xlsx";
+		// Redirect output to a client’s web browser (Excel2007)
+		header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+		header("Content-Disposition: attachment;filename=".$name_file);
 		header('Cache-Control: max-age=0');
-		 
-		$objWriter = PHPExcel_IOFactory::createWriter($objTpl, 'Excel5');  //downloadable file is in Excel 2003 format (.xls)
-		$objWriter->save('php://output');  //send it to user, of course you can save it to disk also!
-		 
-		//exit; //done.. exiting!
+
+		$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+		ob_end_clean();
+		$objWriter->save('php://output');
 	}
 
 	private function _create_no_dok()
