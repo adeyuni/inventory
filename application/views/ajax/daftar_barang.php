@@ -1,7 +1,7 @@
 <div class="form-group">
 	<label for="no_po" class="col-sm-2 control-label">Nama Barang</label>
 	<div class="col-sm-4">
-		<select name="dtl_barang" id="dtl_barang" onchange="get_detail(this.value)" class="form-control">
+		<select name="dtl_barang" id="dtl_barang" onchange="get_detail(this.value)" class="form-control" disabled>
 			<?php
 				$i=1;
 				foreach($listDtlBarang->result() as $row){

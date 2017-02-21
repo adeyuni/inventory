@@ -1,14 +1,7 @@
 <script type="text/javascript">
-	
-	function get_detail(val){
-		var stok_awal = $("#jml-"+val).val();
-		var beredar = $("#beredar-"+val).val();
-
-		document.getElementById("stok-awal").innerHTML = stok_awal;
-		document.getElementById("jml-beredar").innerHTML = beredar;
-	}
 
 	$(document).ready(function(){
+
 		$('.select2').select2();
 		
 		$("#no_po").change(function(){
@@ -21,6 +14,13 @@
 	    	}else{
 	    		location.href="<?php echo site_url('barang/add');?>";
 	    	}
+	    });
+
+	    $("#dtl_barang").change(function(){
+	    	var no_po = $("#no_po").val();
+	    	var dtl_barang = $("#dtl_barang").val();
+	    	
+	    	location.href="<?php echo site_url('barang/add');?>/"+no_po+"/"+dtl_barang;
 	    });
 
 

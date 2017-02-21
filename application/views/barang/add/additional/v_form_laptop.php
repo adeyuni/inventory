@@ -22,8 +22,3 @@
     <input type="text" class="form-control" id="sn_charger" name="sn_charger" placeholder="S/N Charger" value="<?php if(isset($sn_charger)){echo $sn_charger;}?>" >
   </div>
 </div>
-<div class="form-group">
-  <div class="col-sm-offset-2 col-sm-4">
-      <input type="submit" name="submit" id="submit" class="btn btn-primary" value="Submit">
-  </div>
-</div>

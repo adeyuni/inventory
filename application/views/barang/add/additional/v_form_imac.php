@@ -16,8 +16,3 @@
     <input type="text" class="form-control" id="sn_mouse_imac" name="sn_mouse_imac" placeholder="S/N Mouse" value="<?php if(isset($sn_mouse_imac)){echo $sn_mouse_imac;}?>" >
   </div>
 </div>
-<div class="form-group">
-  <div class="col-sm-offset-2 col-sm-4">
-      <input type="submit" name="submit" id="submit" class="btn btn-primary" value="Submit">
-  </div>
-</div>

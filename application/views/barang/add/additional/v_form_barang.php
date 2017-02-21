@@ -4,8 +4,3 @@
 	  <input type="text" class="form-control" id="sn" name="sn" placeholder="Serial Number" value="<?php if(isset($sn)){echo $sn;}?>" required>
 	</div>
 </div>
-<div class="form-group">
-	<div class="col-sm-offset-2 col-sm-4">
-  		<input type="submit" name="submit" id="submit" class="btn btn-primary" value="Submit">
-	</div>
-</div>

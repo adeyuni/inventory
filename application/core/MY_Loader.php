@@ -14,4 +14,15 @@ class MY_Loader extends CI_Loader {
         $this->view('skin/footer', $vars, $return);
     }
    
+   	public function check_session_admin($enableRedirect = true) {
+		$ci =& get_instance();
+	
+		if (!isset($_SESSION['username'])) {
+			if ($enableRedirect) {
+				$ci->output->set_header('Location: '.site_url('/admin/login?next='.urlencode($_SERVER['REQUEST_URI'])));
+			}
+			return false;
+		}
+		return true;
+	}
 }

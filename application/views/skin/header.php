@@ -15,9 +15,6 @@
 <!--Icons-->
 <script src="<?php echo site_url();?>assets/js/lumino.glyphs.js"></script>
 
-<!--[if lt IE 9]>
-<script src="js/html5shiv.js"></script>
-<script src="js/respond.min.js"></script>
-<![endif]-->
+<link rel="stylesheet" href="<?php echo site_url();?>assets/datepicker/css/bootstrap-datepicker.css">
 
 </head>
